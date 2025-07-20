@@ -40,7 +40,7 @@ export const ConfirmationPopup = () => {
       backgroundColor: 'rgba(0,0,0, .2)',
     }} className="background grid place-items-center">
 
-      <form 
+      <form style={{overflow: 'scroll', maxHeight: '100vh'}}
         className="confirmation bg-white pt-8 p-4 rounded-xl md:w-[500px] sm:max-w-full">
         <img src="./assets/icon/icon-order-confirmed.svg" alt="Confirmation icon" />
         <h1 className='font-bold text-[var(--Rose-900)] text-4xl mt-5 mb-3'>Order Confirmed</h1>
@@ -65,7 +65,7 @@ const CartList = () => {
   const { cartItems, removeFromCart, setShow } = useContext(cartContext);
 
   return (
-    <div className="cart-list bg-white rounded-lg flex-1 flex-[30%] p-5 px-6 h-[fit-content]">
+    <div className="cart-list bg-white rounded-lg flex-1 flex-[30%] p-5 px-6 h-[fit-content] max-h-[500px] [overflow-y:scroll]">
       <h2 className="text-2xl font-bold mb-4 text-[var(--Red)]">Your Cart({cartItems.length})
       </h2>
       <div className="cart-preview">
