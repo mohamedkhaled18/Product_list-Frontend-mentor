@@ -10,7 +10,7 @@ function App() {
   const values = useContext(cartContext)
   return (
     <>
-      <div className=" flex justify-between p-[5rem] min-h-screen flex-col lg:flex-row">
+      <div className="flex justify-between p-5 md:p-[5rem] min-h-screen flex-col lg:flex-row">
           <CartProvider value={values}>   
             <ConfirmationPopup />
             <ProductsList />
