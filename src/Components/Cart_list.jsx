@@ -28,7 +28,15 @@ const CartItemConfirm = ({ item }) => {
 
 
 export const ConfirmationPopup = () => {
-  const { cartItems, removeFromCart, show } = useContext(cartContext);
+  const { cartItems, removeFromCart, show , setShow} = useContext(cartContext);
+
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains("background")) {
+      setShow(false);
+    }
+  })
+
+
   if (cartItems.length > 0 && show)
     return <div style={{
       position: 'fixed',
